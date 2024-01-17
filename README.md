@@ -1,1 +1,107 @@
-# aws-data-pipeline-project
+참여자 : 금도영 신민종 윤상훈 이정복
+
+프로젝트 기간 : 2023.11.08 ~ 2023.12.15
+
+## **프로젝트 개요**
+
+- aws 기능을 활용한 데이터파이파인 구축
+- spark와 emr을 사용해 데이터 ETL
+
+![그림01.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/44394bfa-3882-4381-bb2c-d88b740b2486/0fe4b652-876b-47d7-ac78-eadb568a2e93/%EA%B7%B8%EB%A6%BC01.jpg)
+
+## **프로젝트 기술 스택**
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/44394bfa-3882-4381-bb2c-d88b740b2486/b414259b-c556-459d-8ab6-8efb9998d732/Untitled.png)
+
+## **팀원 소개**
+
+- 금도영
+    - 팀장
+    - 데이터 전처리
+    - airflow EMR 자동화
+    - superset 설치 및 시각화
+- 신민종
+    - 데이터 적재
+    - 데이터 분석 및 쿼리 작성
+    - airflow EMR, 적합성 자동화
+- 윤상훈
+    - 데이터적재
+    - EMR환경 구축
+    - mlflow
+    - 모니터링 환경 구축
+- 이정복
+    - 데이터 전처리
+    - 시각화 quick sight ,super set
+    - airflow 설치
+
+## **프로젝트 과정 소개**
+
+pyspark를 통해  s3에 파티셔닝 버켓팅을 통한 데이터적재
+
+- 각 kaggle 데이터  articles, customers, transactions 파티셔닝 버켓팅을 소개
+- 압축해서 적재 (parquet)
+
+CNN으로 이미지 분류 학습을 시켜 카테고리별  파티셔닝 진행
+
+- 95퍼정도의 정확도를 얻을수 있었지만 애시당초 데이터가 불균형한 문제가 있어서 신뢰 하기는 힘듬
+- 이미지 분류를 했을때 사용한 모델을 서빙하는 과정도 포함해야할듯
+- 단순히 모델을 api서버에 띄어 결과값을 받아오는 과정을 시작으로 → 
+도커 이미지화 →  
+모델 관리의 필요성을 느껴 mlflow → 
+mlflow 서빙 → 
+서빙의 불편함을 느껴 서빙은 api로 대채
+    - 서빙의 강점이 있는 bentoml을 썻더라면??
+
+aws emr를 사용해 파티셔닝 버켓팅
+
+- emr serverless를 썻다면
+- 한정적인 권한을 얻을 수밖에 없었을때 생겼던 aws 권한 문제들
+- aws emr
+
+aws athena
+
+- 아테나 쿼리에 대한 설명
+- 파티셔닝을 해 리소스관점에서 이득을 봄
+- parquet 형식으로 변환했을때 데이터 타입 변화의 문제
+
+aws quicksight
+
+- athena에서 데이터 쿼리를 날려 대시보드작성
+- 한정적 자원문제로 무료인 superset으로 변환
+
+airflow 
+
+- ETL 작업의 자동화를 airflow로 구현
+- 각 작업들이 완료될때마다 slack으로 메세지를 받을수있게함
+- 데이터 적합성 로직 추가
+- airflow 무거운문제
+- airflow 대채 argo wrokflow 시도해봐야할듯
+
+ci/cd
+
+- mlflow와 ml api server를 도커 이미지화 시켜 이걸 ci/cd한거 설명
+- ml api server build test할때  healthcheck 기능을 사용해 빌드가 잘되었는지 확인했음
+- slack으로 진행상황을 메세지로 받아볼수있게 구현
+- ml api server 로직은  더 복작하다함  기존 배포되어있는 모델의 성능을 비교해서 더 좋으면 배포 이런식으로
+
+mlflow
+
+- 모델 로깅
+- 모델 서빙
+
+모니터링
+
+- aws → nodexporter
+- airflow → statsd
+- 프로메테우스 그라파나 모니터링
+- alert를 통한 slack 메세지
+
+## **프로젝트 결과**
+
+aws emr 비용
+
+## **프로젝트 회고**
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/44394bfa-3882-4381-bb2c-d88b740b2486/6a612ced-d244-454a-9e0f-1bf3cdab4bc2/Untitled.png)
+
+노션정리 팀프로젝트
