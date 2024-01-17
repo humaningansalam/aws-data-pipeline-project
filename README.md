@@ -49,7 +49,7 @@
 
 ## **프로젝트 세부 과정**
 
-# pyspark를 통해  s3에 파티셔닝 버켓팅을 통한 데이터적재
+### pyspark를 통해  s3에 파티셔닝 버켓팅을 통한 데이터적재
 
 - 각 kaggle 데이터  articles, customers, transactions 파티셔닝 버켓팅을 소개
 - 압축해서 적재 (parquet)
@@ -61,7 +61,7 @@
   
 [변환된 데이터 표시]
 
-CNN으로 이미지 분류 학습을 시켜 카테고리별  파티셔닝 진행
+### CNN으로 이미지 분류 학습을 시켜 카테고리별  파티셔닝 진행
 
 - 95퍼정도의 정확도를 얻을수 있었지만 애시당초 데이터가 불균형한 문제가 있어서 신뢰 하기는 힘듬
 - 이미지 분류를 했을때 사용한 모델을 서빙하는 과정도 포함해야할듯
@@ -79,7 +79,7 @@ CNN으로 이미지 분류 학습을 시켜 카테고리별  파티셔닝 진행
     - 모델서빙에 api 말고 다른 방식들은??
 
 
-aws emr를 사용해 파티셔닝 버켓팅
+### aws emr를 사용해 파티셔닝 버켓팅
 
 - emr 성능 선택 방법
 - 한정적인 권한을 얻을 수밖에 없었을때 생겼던 aws 권한 문제들
@@ -89,7 +89,7 @@ aws emr를 사용해 파티셔닝 버켓팅
 
 [emr 표시]
 
-aws athena
+### aws athena
 
 - 아테나 쿼리에 대한 설명
 - 파티셔닝을 해 리소스관점에서 이득을 봄
@@ -98,14 +98,14 @@ aws athena
 - 고민하여 추가해볼것들
     - athena대채제들??
   
-aws quicksight
+### aws quicksight
 
 - athena에서 데이터 쿼리를 날려 대시보드작성
 - 한정적 자원문제로 무료인 superset으로 변환
 
 [quicksight 대시보드 표시]
 
-airflow 
+### airflow 
 
 - ETL 작업의 자동화를 airflow로 구현
 - 각 작업들이 완료될때마다 slack으로 메세지를 받을수있게함
@@ -117,14 +117,14 @@ airflow
 
 [작동상태의 airflow 표시]
 
-ci/cd
+### ci/cd
 
 - mlflow와 ml api server를 도커 이미지화 시켜 이걸 ci/cd한거 설명
 - ml api server build test할때  healthcheck 기능을 사용해 빌드가 잘되었는지 확인했음
 - slack으로 진행상황을 메세지로 받아볼수있게 구현
 - ml api server 로직은  더 복작하다함  기존 배포되어있는 모델의 성능을 비교해서 더 좋으면 배포 이런식으로
 
-mlflow
+### mlflow
 
 - 모델 로깅
 - 모델 서빙
@@ -132,7 +132,7 @@ mlflow
 [모델 로깅된 mlflow ui 표시]
 
 
-모니터링
+### 모니터링
 
 - aws → nodexporter
 - airflow → statsd
