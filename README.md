@@ -7,7 +7,7 @@
 - aws 기능을 활용한 데이터파이파인 구축
 - spark와 emr을 사용해 데이터 ETL
 
-
+[TEAM REPO](https://github.com/yeardream-de-project-team11/project-team11)
 ## **프로젝트 기술 스택**
 
 ![스크린샷 2024-01-15 185223](https://github.com/humaningansalam/aws-data-pipeline-project/assets/89466243/cf2e8a56-e7fa-491a-9ece-4b8aeee8c327)
