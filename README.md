@@ -49,7 +49,7 @@
 
 ## **프로젝트 세부 과정**
 
-pyspark를 통해  s3에 파티셔닝 버켓팅을 통한 데이터적재
+# pyspark를 통해  s3에 파티셔닝 버켓팅을 통한 데이터적재
 
 - 각 kaggle 데이터  articles, customers, transactions 파티셔닝 버켓팅을 소개
 - 압축해서 적재 (parquet)
