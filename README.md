@@ -6,12 +6,13 @@
 
 - aws 기능을 활용한 데이터파이파인 구축
 - spark와 emr을 사용해 데이터 ETL
+![01](https://github.com/humaningansalam/aws-data-pipeline-project/assets/89466243/844c3cab-0aa1-42c4-b2fa-1b5be5e1df2d)
 
-![그림01.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/44394bfa-3882-4381-bb2c-d88b740b2486/0fe4b652-876b-47d7-ac78-eadb568a2e93/%EA%B7%B8%EB%A6%BC01.jpg)
+
 
 ## **프로젝트 기술 스택**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/44394bfa-3882-4381-bb2c-d88b740b2486/b414259b-c556-459d-8ab6-8efb9998d732/Untitled.png)
+![스크린샷 2024-01-15 185223](https://github.com/humaningansalam/aws-data-pipeline-project/assets/89466243/cf2e8a56-e7fa-491a-9ece-4b8aeee8c327)
 
 ## **팀원 소개**
 
@@ -102,6 +103,6 @@ aws emr 비용
 
 ## **프로젝트 회고**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/44394bfa-3882-4381-bb2c-d88b740b2486/6a612ced-d244-454a-9e0f-1bf3cdab4bc2/Untitled.png)
+
 
 노션정리 팀프로젝트
