@@ -39,11 +39,11 @@
 
 ![01](https://github.com/humaningansalam/aws-data-pipeline-project/assets/89466243/844c3cab-0aa1-42c4-b2fa-1b5be5e1df2d)
 
-- kaggle 데이터를 spark를 사용하여 s3에 업로드
-- 적제된 데이터를 aws emr을 통해 파티셔닝 버켓팅 진행
-- s3에 적제된 transformed data를 aws athena 쿼리 조회
-- aws quicksight를사용하여 적제된 데이터 대시보드로 확인
-- 위의 과정들을 airflow로 자동화
+1. kaggle 데이터를 spark를 사용하여 s3에 업로드
+2. 적제된 데이터를 aws emr을 통해 파티셔닝 버켓팅 진행
+3. s3에 적제된 transformed data를 aws athena 쿼리 조회
+4. aws quicksight를사용하여 적제된 데이터 대시보드로 확인
+5. 위의 과정들을 airflow로 자동화
 
 
 
